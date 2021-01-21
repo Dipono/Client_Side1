@@ -1,0 +1,101 @@
+<body>
+    <header>
+        <h1>STAFF LOGIN</h1>
+    </header>
+<!--(ngSubmit)="SetLStaffLogin(stafflogin)"-->
+    <section>
+        <div class="formcontainer">
+            <div class="formbody">
+                <form [formGroup]="loginForm">
+                    <!--<div class="form-group">
+                        <label class="radio-inline">
+                        <input type="radio" value="doctor"/> Doctor
+                        </label>
+        
+                        <label class="radio-inline">
+                            <input type="radio" value="doctor" /> Admin
+                        </label>
+                    </div>-->
+
+
+                    <div class="form-group">
+                        <label class="radio-inline" *ngFor="let roles of role">
+                        <input type="radio" [value]="roles" formControlName="role" /> {{roles}}
+                        </label>
+                    </div>
+        
+                    <div class="form-group" >
+                         <label >STAFF NO</label> 
+                        <input type="text" formControlName="adminId" placeholder="STAFF NUMBER"  />
+                         <br>
+                        <span *ngIf="isValid('adminId')">
+                            Provide This Field With Staff Number
+                        </span >
+                    </div>
+        
+                    <div class="form-group" >
+                         <label >PASSWORD</label>
+                        <input type="text" formControlName="adminPasswrd" placeholder="PASSWORD" />
+                         <br>
+                        <span *ngIf="isValid('adminPasswrd')">
+                            Provide This Field With Staff password
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" (click)="login()" class="form-control">LOGIN</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!--
+        <form #stafflogin="ngForm" >
+            <div class="form-group">
+                <label class="radio-inline">
+                <input type="radio" value="doctor" name="role" [(ngModel)]="role" /> Doctor
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" value="admin" name="role" [(ngModel)]="role" /> Admin
+                </label>
+            </div>
+
+            <div class="form-group" [class.has-error]="staffNoControl.invalid && staffNoControl.touched">
+                <!-- <label >STAFF NO</label> --
+                <input type="text" required id="staffNo" name="staffNo"
+                [(ngModel)]="staffNo" placeholder="STAFF NUMBER" class="form-control inputText" 
+                #staffNoControl="ngModel" />
+                 <br>
+                <span class="help-block" *ngIf="staffNoControl.invalid && staffNoControl.touched">
+                    Provide This Field With Staff Number
+                </span>
+            </div>
+
+            <div class="form-group" [class.has-error]="passwordControl.invalid && passwordControl.touched">
+                <!-- <label >PASSWORD</label> --
+                <input type="text" required id="password" name="password"
+                [(ngModel)]="password" placeholder="PASSWORD" class="form-control inputText" 
+                #passwordControl="ngModel" />
+                 <br>
+                <span class="help-block" *ngIf="passwordControl.invalid && passwordControl.touched">
+                    Provide This Field With Staff password
+                </span>
+            </div>
+            
+            <div class="form-footer">
+                <div class="form-group">
+                    <button type="submit" class="form-control">LOGIN</button>
+                   <!-- <button type="submit" class="form-control">RECEPTIONIST</button> --
+                    
+                </div>
+            </div>
+                
+        </form>
+        -->
+    </section>
+</body>
+
+<!--
+Angular generated form Model : {{stafflogin.value | json}}-->

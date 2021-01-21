@@ -1,0 +1,86 @@
+
+
+<body>
+    <header>
+        <h1>PATIENT FORM</h1>
+    </header>
+
+    <section>
+        <div class="formcontainer">
+            <div class="formbody">
+                <form [formGroup]="myForm">
+                    <div class="main-form">
+                        <div class="form-group">
+                            <input type="text" formControlName="patientId" placeholder="IDENTIFIOCATION" class="form-control" /><br>
+                            <span *ngIf="isValid('patientId')">Identification Is Required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" formControlName="PatientName" placeholder="FIRST NAME" class="form-control" /><br>
+                            <span *ngIf="isValid('PatientName')">Name Is Required</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" formControlName="PatientSurname" placeholder="SURNAME" class="form-control" /><br>
+                            <span *ngIf="isValid('PatientSurname')">Surname Is Required</span>
+
+                        </div>
+
+                        <!--<div class="form-group">
+                            <input type="text" formControlName="gender" placeholder="GENDER" class="form-control" /><br>
+                            <span *ngIf="isValid('gender')">Gender Is Required</span>
+                        </div>-->
+
+                        <div class="form-group"> 
+                            <select class="form-control" formControlName="gender" placeholder="GENDER">
+                                <option *ngFor="let genders of gender" [value]="genders">{{genders}}</option>
+                            </select><br>
+                            <span *ngIf="isValid('gender')">Gender Is Required</span>
+                        </div>
+
+                        <!--<div class="form-group"> 
+                            <select class="form-control" formControlName="bldTypeId" placeholder="BLOOD TYPE">
+                                <option *ngFor="let bldTypeId of blood" [value]="blood">{{bldTypeId}}</option>
+                            </select><br>
+                            <span *ngIf="isValid('bldTypeId')">Blood Type Is Required</span>
+                        </div>-->
+                        
+                        <div class="form-group">
+                            <input type="text" formControlName="email" placeholder="EMAIL" class="form-control" /><br>
+                            <span *ngIf="isValid('email')">Valid Email Address Is Required</span>
+
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" formControlName="phoneNumber" placeholder="PHONE NUMBER" class="form-control" /><br>
+                            <span *ngIf="isValid('phoneNumber')">Phone Number Is Required</span>
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" formControlName="PatientAddress" placeholder="PATIENT ADDRESS" class="form-control" /><br>
+                            <span *ngIf="isValid('PatientAddress')">Patient Address Is Required</span>
+
+                        </div>       
+
+                        <div class="form-group">
+                            <input type="date" formControlName="dob" class="form-control" /><br>
+                            <span *ngIf="isValid('dob')">Patient Address Is Required</span>
+
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="form-footer">
+                        <div class="form-group">
+                            <button type="button" (click)="register()" >ADD PATIENT</button>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        {{myMessage}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

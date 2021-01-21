@@ -1,0 +1,33 @@
+body{
+    height: 640px;    
+    background-color: blue;
+    padding-left: 70px;
+}
+
+header {
+    padding-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+header button{
+    float: left;
+    margin-top: 30px;
+}
+
+header{
+    color: white;
+}
+
+section .field{
+    padding-left: 50px;
+}
+
+td{
+    color: white;
+}
+
+.getVal{
+    width: 300px;
+    text-align: center;
+}

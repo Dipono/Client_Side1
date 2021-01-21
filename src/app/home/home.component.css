@@ -1,0 +1,25 @@
+body{
+    background-image: url('../Image/background_picture.jpg');
+    height: 100%;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 97vh;
+    position: relative;
+    color: white;
+}
+
+header h1{
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+button{
+    position: absolute;
+    bottom: 45px;
+    right:45px;
+    width: 85px;
+    height: 30px;
+
+}
