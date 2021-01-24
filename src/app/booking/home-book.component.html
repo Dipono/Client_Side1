@@ -1,0 +1,69 @@
+
+
+<body>
+    <header>
+        <h1>PATIENT INFORMATION</h1>
+    </header>
+
+    <section>
+        <div class="formcontainer">
+            <div class="formbody">
+                <form >
+                    <div class="main-form">
+                        <div class="form-group">
+                            <input type="text"  placeholder="IDENTIFIOCATION" class="form-control" /><br>
+                            <span >Identification Is Required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text"  placeholder="FIRST NAME" class="form-control" /><br>
+                            <span >Name Is Required</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text"  placeholder="SURNAME" class="form-control" /><br>
+                            <span >Surname Is Required</span>
+
+                        </div>                        
+
+                        <div class="form-group">
+                            <input placeholder="Date of Birth"  class="form-control" /><br>
+                            <span >Patient Address Is Required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text"  placeholder="PHONE NUMBER" class="form-control" /><br>
+                            <span >Phone Number Is Required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text"  placeholder="EMAIL" class="form-control" /><br>
+                            <span >Valid Email Address Is Required</span>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="form-footer">
+                        <div id="makeApp">
+                            <div class="form-group">
+                                <button type="button" (click)="onMakeBooking()"  >Book Appointment</button>
+                            </div>
+                        </div>
+                        <div id="out">
+                            <div class="form-group">
+                                <button type="button" (click)="moveToAdmin()"  >Back</button>
+                            </div>
+    
+                            <div class="form-group">
+                                <button type="button"  >Logout</button>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

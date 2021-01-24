@@ -1,0 +1,40 @@
+body{
+    height: 640px;    
+    background-color: blue;
+}
+
+
+header h1{
+  margin-top: 10px;
+  padding-top: 10px;
+  color:white;
+  text-align: center;
+}
+
+section{
+   margin-left: 300px;
+}
+
+.form-group{
+    margin-bottom: 12px;
+}
+
+
+.main-form .form-control{
+    width: 300px;
+    text-transform: uSppercase;
+   
+}
+
+.form-footer{
+    display: flex;
+}
+
+.form-footer #out{
+    margin-left: 500px;
+    display: flex;
+} 
+
+.form-footer #out .form-group{
+    margin-right: 50px;
+}

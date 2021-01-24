@@ -42,3 +42,11 @@ section{
     width:150px;
     height: 30px;
 }
+
+#message{
+    text-align: center;
+    font-size: 1.8em;
+    color: red;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { MyserviceService } from '../myservice.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,14 +11,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   constructor(private _activatedRoute: ActivatedRoute,
-              private _router: Router) { }
+    private router: Router,
+    private myservice: MyserviceService) { }
 
-  onMakeBookingButtonClick(): void{
-    this._router.navigate(['/booking']/*,{relativeTo:this._activatedRoute}*/)
+    title = 'Patient Records';
+
+  getPatientDetails(loginForm: NgForm) {
+    //this.router.navigate(['patient-details', loginForm.value.idNumber]);
   }
 
-  onMAddPatientgButtonClick(): void{
-    this._router.navigate(['/register']/*,{relativeTo:this._activatedRoute}*/)
+  logout() {
+    //this.router.navigate(['welcome-page']);
+  }
+  registerPatient() {
+    //this.router.navigate(['patient-registration']);
   }
 
   ngOnInit(): void {

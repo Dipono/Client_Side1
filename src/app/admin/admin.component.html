@@ -1,24 +1,21 @@
-<body>
 
-    <!----->
-    <header>
-        <h1>ADMIN PAGE</h1>
-        
-    </header>
-
-    <section>
-       <form>
-        <div class="form-group">
-            <input type="button" class="btn btn-default" (click)="onMakeBookingButtonClick()" 
-            value="Make Bookings" />
-        </div>
-
-        <div class="form-group">
-            <input type="button" class="btn btn-default" (click)="onMAddPatientgButtonClick()"
-            value="Add New Patient" />
-        </div>
-       </form>
-    </section>
-</body>
-
-<router-outlet></router-outlet>
+<div>
+	<form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && getPatientDetails(loginForm)" class="patient-login" novalidate>
+	   <h1 class="page-heading">{{title}}</h1>
+	   <div class="form-group">
+		  <input type="text" name="idNumber" #idNumber="ngModel" ngModel  maxlength="13" required minlength="13" pattern="^\d{13}$">
+		  <div *ngIf="loginForm.submitted && idNumber.invalid" >
+			<div class="required-fields" *ngIf="idNumber.errors?.required">
+			Patient ID number is required!
+			</div>
+			<div class="required-fields" *ngIf="(idNumber.touched ) && idNumber.errors?.pattern">
+			Invalid, Patient ID number must be 13 digits!
+			</div>
+		  </div>
+	   </div>
+	   <div class="form-group">
+	   <button class="search-button" type="submit">Search</button><button (click)="registerPatient()" class="register-button" >Register</button>
+	   </div>
+	</form>
+	<button (click)="logout()" class="logout-button" >Logout</button>	
+	</div>

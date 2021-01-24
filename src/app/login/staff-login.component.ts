@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormGroup, FormControl, NgForm, Validators } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
 import { MyserviceService } from '../myservice.service';
 import {RouterModule,Router, ActivatedRoute} from '@angular/router';
 
@@ -44,7 +41,7 @@ export class StaffLoginComponent implements OnInit {
     }
 
     else{
-      this._myservice.submitLogin(this.loginForm.value)
+      this._myservice.submitLoginAdmin(this.loginForm.value)
       .subscribe(
         data => {
           console.log(data);
@@ -53,7 +50,7 @@ export class StaffLoginComponent implements OnInit {
           
         },
         error => {
-          return
+          return this.myMessage = 'Wrong Admin Id or Password';
         }
       )
     }

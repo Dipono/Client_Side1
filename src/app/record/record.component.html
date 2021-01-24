@@ -1,4 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <title>Form Design #1</title>
+    <style>
+        body {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <div class="form__title">Medical Record</div>
+        <p class="form__desc">
+            fggfgglflkl
+        </p>
+        <div class="form__item">
+            <label for="Name" class="form__label">Name:</label>
+            <input type="text" class="form__input" name="name" id="name" placeholder="Name">
+            <span class="form__error">A sample error message</span>
+        </div>
+        <div class="form__item">
+            <label for="lastName" class="form__label">Surname:</label>
+            <input type="text" class="form__input" name="lastName" id="name" placeholder="lastName">
+            <span class="form__error">A sample error message</span>
+        </div>
+        <div class="form__item">
+            <label for="age" class="form__label">Age:</label>
+            <input type="text" class="form__input" name="age" id="age" placeholder="Age">
+            <span class="form__error">A sample error message</span>
+        </div>
+        <div class="form__item">
+            <label for="bloodtype" class="form__label">Blood Type:</label>
+            <input type="text" class="form__input" name="bloodtype" id="bloodtype" placeholder="A+">
+            <span class="form__error">A sample error message</span>
+        </div>
+        <div class="form__item">
+            <label for="checkbox" class="form__label">Chronic Diseases</label>
+            <form>
+                <input type="checkbox" name="check" id="GFG" value="1" checked>Cancer<br>
+                <input type="checkbox" name="check" value="2"> Diebetes<br>
+                <input type="checkbox" name="check" value="2"> Multiple Sclerosis<br>
+                <input type="checkbox" name="check" value="2"> Asthma<br>
+                <input type="checkbox" name="check" value="2"> Arthritis<br>
+            </form> <br>
+        </div>
+        <div class="form__medInfo">
+            <label for="medicalReport" class="form__label">Medical Report</label>
+            <textarea name="medicalReport" id="medicalReport" class="form__input" placeholder="18 Jan 2021. Session" maxlength="500"></textarea>
+            <span class="form__error">A sample error message</span>
+
+            <button class="button1" type="submit" name="send" value="update">Update</button>
+            <button class="button2" type="submit" name="send" value="update">Cancel</button>
+        </div>
+        <div class="form__prescription">
+            <label for="prescription" class="form__label">Prescription</label>
+            <textarea name="prescription" id="prescription" class="form__input" placeholder="Prescription" maxlength="500"></textarea>
+            <span class="form__error">A sample error message</span>
+
+            <button class="button3" type="submit" name="send" value="update">Create</button>
+            <button class="button4" type="submit" name="send" value="update">Cancel</button>
+        </div>
+    </form>
+
+   
+
+</body>
+
+</html>
+
+
+<!--
 <body>
     <header>
         <button><i class="fas fa-angle-left"></i>BACK</button>
@@ -24,4 +98,4 @@
         </table>
     </section>
    
-</body>
+</body>-->

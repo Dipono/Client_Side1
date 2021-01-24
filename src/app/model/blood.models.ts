@@ -1,4 +1,4 @@
-export class Gender{
+export class BloodType{
     id:number;
     name:string;
 }

@@ -1,0 +1,46 @@
+<body>
+    <header>
+        <h1>DOCTOR LOGIN</h1>
+    </header>
+    <section>
+        <div class="formcontainer">
+            <div class="formbody">
+                <form [formGroup]="loginForm">
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label>DOCTOR ID</label>
+                            <input type="text" formControlName="doctorId" placeholder="DOCTOR ID" />
+                            <br>
+                            <span *ngIf="isValid('doctorId')">
+                                Provide This Field With Doctor ID
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>PASSWORD</label>
+                            <input type="password" formControlName="doctorPasswrd" placeholder="PASSWORD" />
+                            <br>
+                            <span *ngIf="isValid('doctorPasswrd')">
+                                Provide This Field With Doctor password
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="form-group">
+                            <button type="submit" (click)="login()" class="form-control">Login</button>
+                        </div>
+
+                        <div class="form-group" style=" margin-bottom: 50px; margin-left: 700px;">
+                            <button type="submit" (click)="moveBack()" class="form-control" style="height: 15x; width: 75px;">Cancel</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div id="message">{{myMessage}}</div>
+            </div>
+        </div>
+
+    </section>
+</body>

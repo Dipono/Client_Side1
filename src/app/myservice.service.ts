@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const baseUrl = 'http://localhost:4041';
+//const baseUrl = 'http://localhost:4041';
 
 
 @Injectable({
@@ -15,13 +15,20 @@ export class MyserviceService {
     return this._http.post('http://localhost:4041/register', body,{
       observe:'body'
     });
-  }
+  }z
 
-  submitLogin(body:any){
+  submitLoginAdmin(body:any){
     return this._http.post('http://localhost:4041/logadmin', body,{
       observe:'body'
     });
   }
+
+  submitLoginDoctr(body:any){
+    return this._http.post('http://localhost:4041/logdoctor', body,{
+      observe:'body'
+    });
+  }
+
   submitBloodType(){
     return this._http.get('http://localhost:4041/getblood', {
       observe: 'body'

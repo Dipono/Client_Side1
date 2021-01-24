@@ -1,0 +1,48 @@
+<body>
+    <header>
+        <h1>ADMIN LOGIN</h1>
+    </header>
+    <section>
+        <div class="formcontainer">
+            <div class="formbody">
+                <form [formGroup]="loginForm">
+
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label>ANDIN ID</label>
+                            <input type="text" formControlName="adminId" placeholder="ANDIN ID" />
+                            <br>
+                            <span *ngIf="isValid('adminId')">
+                                Provide This Field With Admin Id
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>PASSWORD</label>
+                            <input type="password" formControlName="adminPasswrd" placeholder="PASSWORD" />
+                            <br>
+                            <span *ngIf="isValid('adminPasswrd')">
+                                Provide This Field With Admin password
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="form-group">
+                            <button type="submit" (click)="login()" class="form-control">Login</button>
+                        </div>
+
+                        <div class="form-group" style=" margin-bottom: 50px; margin-left: 700px;">
+                            <button type="submit" (click)="moveBack()" class="form-control" style="height: 15x; width: 75px;">Cancel</button>
+                        </div>
+                    </div>
+
+
+                </form>
+
+                <div id="message">{{myMessage}}</div>
+            </div>
+        </div>
+
+    </section>
+</body>

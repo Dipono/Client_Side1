@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,6 +16,10 @@ import { AdminComponent } from './admin/admin.component';
 import { BookingComponent } from './booking/booking.component';
 
 import { MyserviceService } from './myservice.service';
+import { ValidateService } from './validate.service';
+import { HomeBookComponent } from './booking/home-book.component';
+import { AdminLoginComponent } from './login/admin-login.component';
+import { DoctorLoginComponent } from './login/doctor-login.component';
 
 
 /*const appRoute = [
@@ -36,7 +41,10 @@ import { MyserviceService } from './myservice.service';
     DoctorComponent,
     RecordComponent,
     AdminComponent,
-    BookingComponent
+    BookingComponent,
+    HomeBookComponent,
+    AdminLoginComponent,
+    DoctorLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +53,10 @@ import { MyserviceService } from './myservice.service';
     //RouterModule.forRoot(appRoute),
     FontAwesomeModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule
   ],
-  providers: [ MyserviceService ],
+  providers: [ MyserviceService, ValidateService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

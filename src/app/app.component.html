@@ -25,12 +25,29 @@
         <a class="nav-link" [routerLink]="['/booking']" hidden routerLinkActive="active">Make Booking</a>
       </li>
 
+      <li class="nav-item" style="list-style: none;">
+        <a class="nav-link" [routerLink]="['/record']" hidden  routerLinkActive="active">Records</a>
+      </li>
+
+      <li class="nav-item" style="list-style: none;">
+        <a class="nav-link" [routerLink]="['/bookhome']" hidden routerLinkActive="active">Book Home Page</a>
+      </li>
+
+      <li class="nav-item" style="list-style: none;">
+        <a class="nav-link" [routerLink]="['/adminLog']" hidden routerLinkActive="active">Admin Login</a>
+      </li>
+
+      <li class="nav-item" style="list-style: none;">
+        <a class="nav-link" [routerLink]="['/doctorLog']" hidden routerLinkActive="active">Doctor Login</a>
+      </li>
+      
 
       
   
   <div class="container-fluid" style="list-style: none;">
     <div class="row">
       <div class="col-md-6 offset-md-3">
+        <!--<flash-messages></flash-messages>-->
         <router-outlet></router-outlet>
       </div>
     </div>

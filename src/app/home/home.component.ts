@@ -16,8 +16,12 @@ export class HomeComponent implements OnInit {
 
   }
 
-  moveToLogin(){
-    this.router.navigate(['/login'])
+  moveToAminLogin(){
+    this.router.navigate(['/adminLog'])
+  }
+
+  moveToDoctorLogin(){
+    this.router.navigate(['/doctorLog'])
   }
 
 }
